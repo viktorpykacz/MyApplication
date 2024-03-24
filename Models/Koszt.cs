@@ -3,7 +3,7 @@
     public class Koszt
     {
         public int Id { get; set; }
-        public DateTime? DataWystawieniaFaktury { get; set; }
+        public DateOnly? DataWystawieniaFaktury { get; set; }
         public string? NumerFaktury { get; set; }
         public string? NipFirmy { get; set; }
         public string? OpisKosztu { get; set; }
