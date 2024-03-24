@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -18,10 +17,10 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWpisu = table.Column<string>(type: "date", nullable: true),
-                    StartKontraktu = table.Column<string>(type: "date", nullable: true),
+                    DataWpisu = table.Column<string>(type: "text", nullable: true),
+                    StartKontraktu = table.Column<string>(type: "text", nullable: true),
                     CzyTerminowy = table.Column<bool>(type: "boolean", nullable: true),
-                    KoniecKontraktu = table.Column<string>(type: "date", nullable: true),
+                    KoniecKontraktu = table.Column<string>(type: "text", nullable: true),
                     NazwaProjektu = table.Column<string>(type: "text", nullable: true),
                     StawkaGodzinowa = table.Column<decimal>(type: "numeric", nullable: true),
                     StawkaMiesieczna = table.Column<decimal>(type: "numeric", nullable: true),
@@ -47,7 +46,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWystawieniaFaktury = table.Column<string>(type: "date", nullable: true),
+                    DataWystawieniaFaktury = table.Column<string>(type: "text", nullable: true),
                     NumerFaktury = table.Column<string>(type: "text", nullable: true),
                     NipFirmy = table.Column<string>(type: "text", nullable: true),
                     OpisKosztu = table.Column<string>(type: "text", nullable: true),
@@ -67,7 +66,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWpisu = table.Column<string>(type: "date", nullable: true),
+                    DataWpisu = table.Column<string>(type: "text", nullable: true),
                     Rok = table.Column<int>(type: "integer", nullable: true),
                     Miesiac = table.Column<int>(type: "integer", nullable: true),
                     VatDoOdliczenia = table.Column<decimal>(type: "numeric", nullable: true),
@@ -86,8 +85,8 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWystawieniaFaktury = table.Column<string>(type: "date", nullable: true),
-                    TerminPlatnosci = table.Column<string>(type: "date", nullable: true),
+                    DataWystawieniaFaktury = table.Column<string>(type: "text", nullable: true),
+                    TerminPlatnosci = table.Column<string>(type: "text", nullable: true),
                     NumerFaktury = table.Column<string>(type: "text", nullable: true),
                     NipKlienta = table.Column<string>(type: "text", nullable: true),
                     OpisFaktury = table.Column<string>(type: "text", nullable: true),
@@ -106,8 +105,8 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWpisu = table.Column<string>(type: "date", nullable: true),
-                    DataAktywnosci = table.Column<string>(type: "date", nullable: true),
+                    DataWpisu = table.Column<string>(type: "text", nullable: true),
+                    DataAktywnosci = table.Column<string>(type: "text", nullable: true),
                     CzyPraca = table.Column<bool>(type: "boolean", nullable: true),
                     NazwaProjektu = table.Column<string>(type: "text", nullable: true),
                     IleGodzin = table.Column<int>(type: "integer", nullable: true)
@@ -123,7 +122,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWpisu = table.Column<string>(type: "date", nullable: true),
+                    DataWpisu = table.Column<string>(type: "text", nullable: true),
                     Rok = table.Column<int>(type: "integer", nullable: true),
                     Miesiac = table.Column<int>(type: "integer", nullable: true),
                     NazwaProjektu = table.Column<string>(type: "text", nullable: true),
@@ -140,7 +139,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWpisu = table.Column<string>(type: "date", nullable: true),
+                    DataWpisu = table.Column<string>(type: "text", nullable: true),
                     Rok = table.Column<int>(type: "integer", nullable: true),
                     Miesiac = table.Column<int>(type: "integer", nullable: true),
                     KosztyBiuro = table.Column<decimal>(type: "numeric", nullable: true),

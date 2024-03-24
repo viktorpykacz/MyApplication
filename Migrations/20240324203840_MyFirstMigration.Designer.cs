@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyApplication.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240324202802_MyFirstMigration")]
+    [Migration("20240324203840_MyFirstMigration")]
     partial class MyFirstMigration
     {
         /// <inheritdoc />
@@ -36,11 +36,11 @@ namespace MyApplication.Migrations
                     b.Property<bool?>("CzyPraca")
                         .HasColumnType("boolean");
 
-                    b.Property<string?>("DataAktywnosci")
-                        .HasColumnType("date");
+                    b.Property<string>("DataAktywnosci")
+                        .HasColumnType("text");
 
-                    b.Property<string?>("DataWpisu")
-                        .HasColumnType("date");
+                    b.Property<string>("DataWpisu")
+                        .HasColumnType("text");
 
                     b.Property<int?>("IleGodzin")
                         .HasColumnType("integer");
@@ -70,8 +70,8 @@ namespace MyApplication.Migrations
                     b.Property<bool?>("CzyTerminowy")
                         .HasColumnType("boolean");
 
-                    b.Property<string?>("DataWpisu")
-                        .HasColumnType("date");
+                    b.Property<string>("DataWpisu")
+                        .HasColumnType("text");
 
                     b.Property<string>("EmailZleceniodawcy")
                         .HasColumnType("text");
@@ -79,8 +79,8 @@ namespace MyApplication.Migrations
                     b.Property<string>("KodPocztowyZleceniodawcy")
                         .HasColumnType("text");
 
-                    b.Property<string?>("KoniecKontraktu")
-                        .HasColumnType("date");
+                    b.Property<string>("KoniecKontraktu")
+                        .HasColumnType("text");
 
                     b.Property<string>("KrajZleceniodawcy")
                         .HasColumnType("text");
@@ -103,8 +103,8 @@ namespace MyApplication.Migrations
                     b.Property<string>("Stanowisko")
                         .HasColumnType("text");
 
-                    b.Property<string?>("StartKontraktu")
-                        .HasColumnType("date");
+                    b.Property<string>("StartKontraktu")
+                        .HasColumnType("text");
 
                     b.Property<decimal?>("StawkaGodzinowa")
                         .HasColumnType("numeric");
@@ -125,8 +125,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string?>("DataWystawieniaFaktury")
-                        .HasColumnType("date");
+                    b.Property<string>("DataWystawieniaFaktury")
+                        .HasColumnType("text");
 
                     b.Property<string>("NipFirmy")
                         .HasColumnType("text");
@@ -162,8 +162,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string?>("DataWpisu")
-                        .HasColumnType("date");
+                    b.Property<string>("DataWpisu")
+                        .HasColumnType("text");
 
                     b.Property<int?>("Miesiac")
                         .HasColumnType("integer");
@@ -196,8 +196,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string?>("DataWystawieniaFaktury")
-                        .HasColumnType("date");
+                    b.Property<string>("DataWystawieniaFaktury")
+                        .HasColumnType("text");
 
                     b.Property<string>("NipKlienta")
                         .HasColumnType("text");
@@ -208,8 +208,8 @@ namespace MyApplication.Migrations
                     b.Property<string>("OpisFaktury")
                         .HasColumnType("text");
 
-                    b.Property<string?>("TerminPlatnosci")
-                        .HasColumnType("date");
+                    b.Property<string>("TerminPlatnosci")
+                        .HasColumnType("text");
 
                     b.Property<decimal?>("WartoscBrutto")
                         .HasColumnType("numeric");
@@ -233,8 +233,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string?>("DataWpisu")
-                        .HasColumnType("date");
+                    b.Property<string>("DataWpisu")
+                        .HasColumnType("text");
 
                     b.Property<int?>("IleGodzin")
                         .HasColumnType("integer");
@@ -261,8 +261,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string?>("DataWpisu")
-                        .HasColumnType("date");
+                    b.Property<string>("DataWpisu")
+                        .HasColumnType("text");
 
                     b.Property<decimal?>("KosztyAuto")
                         .HasColumnType("numeric");
