@@ -3,7 +3,7 @@
     public class ZestawienieMiesieczneFirmy
     {
         public int Id { get; set; }
-        public DateOnly? DataWpisu { get; set; }
+        public string? DataWpisu { get; set; }
         public int? Rok { get; set; }
         public int? Miesiac { get; set; }
         public decimal? KosztyBiuro { get; set; }

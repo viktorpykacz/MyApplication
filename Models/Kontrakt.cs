@@ -3,10 +3,10 @@
     public class Kontrakt
     {
         public int Id { get; set; }
-        public DateOnly? DataWpisu { get; set; }
-        public DateOnly? StartKontraktu { get; set; }
+        public string? DataWpisu { get; set; }
+        public string? StartKontraktu { get; set; }
         public bool? CzyTerminowy { get; set; }
-        public DateOnly? KoniecKontraktu { get; set; }
+        public string? KoniecKontraktu { get; set; }
         public string? NazwaProjektu { get; set; }
         public decimal? StawkaGodzinowa { get; set; }
         public decimal? StawkaMiesieczna { get; set; }

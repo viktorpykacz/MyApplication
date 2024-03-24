@@ -3,8 +3,8 @@
     public class Przychod
     {
         public int Id { get; set; }
-        public DateOnly? DataWystawieniaFaktury { get; set; }
-        public DateOnly? TerminPlatnosci { get; set; }
+        public string? DataWystawieniaFaktury { get; set; }
+        public string? TerminPlatnosci { get; set; }
         public string? NumerFaktury { get; set; }
         public string? NipKlienta { get; set; }
         public string? OpisFaktury { get; set; }
