@@ -11,7 +11,7 @@ namespace MyApplication.Data
         public DbSet<ZestawienieMiesieczneFirmy> ZestawienieMiesieczneFirmy { get; set; }
         public DbSet<ZestawienieGodzinPracy> ZestawienieGodzinPracy { get; set; }
         public DbSet<Podatek> Podatek { get; set; }
-        public DbSet<GodzinyPracy> RaportGodzinPracy { get; set; }
+        public DbSet<GodzinyPracy> GodzinyPracy { get; set; }
 
     }
 }

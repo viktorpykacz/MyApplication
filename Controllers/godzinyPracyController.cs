@@ -25,21 +25,21 @@ namespace MyApplication.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GodzinyPracy>>> GetGodziny()
         {
-            return await _context.RaportGodzinPracy.ToListAsync();
+            return await _context.GodzinyPracy.ToListAsync();
         }
 
         //GET: api/Godziny/NazwaProjektu
         [HttpGet("{NazwaProjektu}")]
         public async Task<ActionResult<IEnumerable<GodzinyPracy>>> GetGodzinyZProjektu(string NazwaProjektu)
         {
-            return await _context.RaportGodzinPracy.Where(x => x.NazwaProjektu == NazwaProjektu).ToListAsync();
+            return await _context.GodzinyPracy.Where(x => x.NazwaProjektu == NazwaProjektu).ToListAsync();
         }
 
         // POST: api/Godziny
         [HttpPost]
         public async Task<ActionResult<GodzinyPracy>> PostGodziny(GodzinyPracy godziny)
         {
-            _context.RaportGodzinPracy.Add(godziny);
+            _context.GodzinyPracy.Add(godziny);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetGodziny", new { id = godziny.Id }, godziny);
@@ -47,7 +47,7 @@ namespace MyApplication.Controllers
 
         private bool GodzinyExists(long id)
         {
-            return _context.RaportGodzinPracy.Any(e => e.Id == id);
+            return _context.GodzinyPracy.Any(e => e.Id == id);
         }
 
         // PUT: api/Godziny
@@ -84,13 +84,13 @@ namespace MyApplication.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGodziny(int id)
         {
-            var godziny = await _context.RaportGodzinPracy.FindAsync(id);
+            var godziny = await _context.GodzinyPracy.FindAsync(id);
             if (godziny == null)
             {
                 return NotFound();
             }
 
-            _context.RaportGodzinPracy.Remove(godziny);
+            _context.GodzinyPracy.Remove(godziny);
             await _context.SaveChangesAsync();
 
             return NoContent();

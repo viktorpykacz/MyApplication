@@ -28,6 +28,15 @@ namespace MyApplication.Controllers
             return await _context.Kontrakty.ToListAsync();
         }
 
+        //GET: api/Kontrakty/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Kontrakt>>> GetKontraktyId(int id)
+        {
+            return await _context.Kontrakty
+                .Where(x => x.Id == id)
+                .ToListAsync();
+        }
+
         // POST: api/Kontrakty
         [HttpPost]
         public async Task<ActionResult<Kontrakt>> PostKontrakt(Kontrakt kontrakt)

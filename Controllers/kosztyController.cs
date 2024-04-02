@@ -26,7 +26,7 @@ namespace MyApplication.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Koszt>>> GetKoszty()
         {
-            return await _context.Koszty.OrderByDescending(x => x.DataWystawieniaFaktury).ToListAsync();
+            return await _context.Koszty.ToListAsync();
         }
 
         // GET: api/RodzajKosztu

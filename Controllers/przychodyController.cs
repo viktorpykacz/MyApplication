@@ -25,9 +25,17 @@ namespace MyApplication.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Przychod>>> GetPrzychody()
         {
-            return await _context.Przychody.OrderByDescending(x => x.DataWystawieniaFaktury).ToListAsync();
+            return await _context.Przychody.ToListAsync();
         }
 
+        //GET: api/Przychody/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Przychod>>> GetPrzychodyId(int id)
+        {
+            return await _context.Przychody
+                .Where(x => x.Id == id)
+                .ToListAsync();
+        }
 
         // POST: api/Przychody
         [HttpPost]
