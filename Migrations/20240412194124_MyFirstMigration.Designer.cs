@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyApplication.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240324203840_MyFirstMigration")]
+    [Migration("20240412194124_MyFirstMigration")]
     partial class MyFirstMigration
     {
         /// <inheritdoc />
@@ -50,7 +50,7 @@ namespace MyApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RaportGodzinPracy");
+                    b.ToTable("GodzinyPracy");
                 });
 
             modelBuilder.Entity("MyApplication.Models.Kontrakt", b =>

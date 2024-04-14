@@ -12,6 +12,23 @@ namespace MyApplication.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "GodzinyPracy",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    DataWpisu = table.Column<string>(type: "text", nullable: true),
+                    DataAktywnosci = table.Column<string>(type: "text", nullable: true),
+                    CzyPraca = table.Column<bool>(type: "boolean", nullable: true),
+                    NazwaProjektu = table.Column<string>(type: "text", nullable: true),
+                    IleGodzin = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GodzinyPracy", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Kontrakty",
                 columns: table => new
                 {
@@ -100,23 +117,6 @@ namespace MyApplication.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RaportGodzinPracy",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DataWpisu = table.Column<string>(type: "text", nullable: true),
-                    DataAktywnosci = table.Column<string>(type: "text", nullable: true),
-                    CzyPraca = table.Column<bool>(type: "boolean", nullable: true),
-                    NazwaProjektu = table.Column<string>(type: "text", nullable: true),
-                    IleGodzin = table.Column<int>(type: "integer", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RaportGodzinPracy", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "ZestawienieGodzinPracy",
                 columns: table => new
                 {
@@ -158,6 +158,9 @@ namespace MyApplication.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "GodzinyPracy");
+
+            migrationBuilder.DropTable(
                 name: "Kontrakty");
 
             migrationBuilder.DropTable(
@@ -168,9 +171,6 @@ namespace MyApplication.Migrations
 
             migrationBuilder.DropTable(
                 name: "Przychody");
-
-            migrationBuilder.DropTable(
-                name: "RaportGodzinPracy");
 
             migrationBuilder.DropTable(
                 name: "ZestawienieGodzinPracy");
