@@ -3,6 +3,7 @@
     public class Koszt
     {
         public int Id { get; set; }
+        public string? Dodal { get; set; } = "api";
         public string? DataWystawieniaFaktury { get; set; }
         public string? NumerFaktury { get; set; }
         public string? NipFirmy { get; set; }

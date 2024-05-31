@@ -3,6 +3,7 @@
     public class ZestawienieMiesieczneFirmy
     {
         public int Id { get; set; }
+        public string? Dodal { get; set; } = "api";
         public string? DataWpisu { get; set; }
         public int? Rok { get; set; }
         public int? Miesiac { get; set; }

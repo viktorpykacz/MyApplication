@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public string? DataWpisu { get; set; }
+        public string? Dodal { get; set; } = "api";
         public string? StartKontraktu { get; set; }
         public bool? CzyTerminowy { get; set; }
         public string? KoniecKontraktu { get; set; }

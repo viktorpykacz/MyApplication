@@ -39,6 +39,9 @@ namespace MyApplication.Migrations
                     b.Property<string>("DataWpisu")
                         .HasColumnType("text");
 
+                    b.Property<string>("Dodal")
+                        .HasColumnType("text");
+
                     b.Property<int?>("IleGodzin")
                         .HasColumnType("integer");
 
@@ -68,6 +71,9 @@ namespace MyApplication.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("DataWpisu")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Dodal")
                         .HasColumnType("text");
 
                     b.Property<string>("EmailZleceniodawcy")
@@ -125,6 +131,9 @@ namespace MyApplication.Migrations
                     b.Property<string>("DataWystawieniaFaktury")
                         .HasColumnType("text");
 
+                    b.Property<string>("Dodal")
+                        .HasColumnType("text");
+
                     b.Property<string>("NipFirmy")
                         .HasColumnType("text");
 
@@ -162,6 +171,9 @@ namespace MyApplication.Migrations
                     b.Property<string>("DataWpisu")
                         .HasColumnType("text");
 
+                    b.Property<string>("Dodal")
+                        .HasColumnType("text");
+
                     b.Property<int?>("Miesiac")
                         .HasColumnType("integer");
 
@@ -194,6 +206,9 @@ namespace MyApplication.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("DataWystawieniaFaktury")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Dodal")
                         .HasColumnType("text");
 
                     b.Property<string>("NipKlienta")
@@ -233,6 +248,9 @@ namespace MyApplication.Migrations
                     b.Property<string>("DataWpisu")
                         .HasColumnType("text");
 
+                    b.Property<string>("Dodal")
+                        .HasColumnType("text");
+
                     b.Property<int?>("IleGodzin")
                         .HasColumnType("integer");
 
@@ -259,6 +277,9 @@ namespace MyApplication.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("DataWpisu")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Dodal")
                         .HasColumnType("text");
 
                     b.Property<decimal?>("KosztyAuto")

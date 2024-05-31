@@ -17,6 +17,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Dodal = table.Column<string>(type: "text", nullable: true),
                     DataWpisu = table.Column<string>(type: "text", nullable: true),
                     DataAktywnosci = table.Column<string>(type: "text", nullable: true),
                     CzyPraca = table.Column<bool>(type: "boolean", nullable: true),
@@ -35,6 +36,7 @@ namespace MyApplication.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     DataWpisu = table.Column<string>(type: "text", nullable: true),
+                    Dodal = table.Column<string>(type: "text", nullable: true),
                     StartKontraktu = table.Column<string>(type: "text", nullable: true),
                     CzyTerminowy = table.Column<bool>(type: "boolean", nullable: true),
                     KoniecKontraktu = table.Column<string>(type: "text", nullable: true),
@@ -63,6 +65,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Dodal = table.Column<string>(type: "text", nullable: true),
                     DataWystawieniaFaktury = table.Column<string>(type: "text", nullable: true),
                     NumerFaktury = table.Column<string>(type: "text", nullable: true),
                     NipFirmy = table.Column<string>(type: "text", nullable: true),
@@ -83,6 +86,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Dodal = table.Column<string>(type: "text", nullable: true),
                     DataWpisu = table.Column<string>(type: "text", nullable: true),
                     Rok = table.Column<int>(type: "integer", nullable: true),
                     Miesiac = table.Column<int>(type: "integer", nullable: true),
@@ -102,6 +106,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Dodal = table.Column<string>(type: "text", nullable: true),
                     DataWystawieniaFaktury = table.Column<string>(type: "text", nullable: true),
                     TerminPlatnosci = table.Column<string>(type: "text", nullable: true),
                     NumerFaktury = table.Column<string>(type: "text", nullable: true),
@@ -122,6 +127,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Dodal = table.Column<string>(type: "text", nullable: true),
                     DataWpisu = table.Column<string>(type: "text", nullable: true),
                     Rok = table.Column<int>(type: "integer", nullable: true),
                     Miesiac = table.Column<int>(type: "integer", nullable: true),
@@ -139,6 +145,7 @@ namespace MyApplication.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Dodal = table.Column<string>(type: "text", nullable: true),
                     DataWpisu = table.Column<string>(type: "text", nullable: true),
                     Rok = table.Column<int>(type: "integer", nullable: true),
                     Miesiac = table.Column<int>(type: "integer", nullable: true),
