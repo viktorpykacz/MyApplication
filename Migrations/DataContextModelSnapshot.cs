@@ -33,11 +33,11 @@ namespace MyApplication.Migrations
                     b.Property<bool?>("CzyPraca")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("DataAktywnosci")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataAktywnosci")
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("DataWpisu")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataWpisu")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Dodal")
                         .HasColumnType("text");
@@ -70,8 +70,8 @@ namespace MyApplication.Migrations
                     b.Property<bool?>("CzyTerminowy")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("DataWpisu")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataWpisu")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Dodal")
                         .HasColumnType("text");
@@ -82,8 +82,8 @@ namespace MyApplication.Migrations
                     b.Property<string>("KodPocztowyZleceniodawcy")
                         .HasColumnType("text");
 
-                    b.Property<string>("KoniecKontraktu")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("KoniecKontraktu")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("KrajZleceniodawcy")
                         .HasColumnType("text");
@@ -106,8 +106,8 @@ namespace MyApplication.Migrations
                     b.Property<string>("Stanowisko")
                         .HasColumnType("text");
 
-                    b.Property<string>("StartKontraktu")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("StartKontraktu")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal?>("StawkaGodzinowa")
                         .HasColumnType("numeric");
@@ -128,8 +128,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("DataWystawieniaFaktury")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataWystawieniaFaktury")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Dodal")
                         .HasColumnType("text");
@@ -168,8 +168,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("DataWpisu")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataWpisu")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Dodal")
                         .HasColumnType("text");
@@ -205,8 +205,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("DataWystawieniaFaktury")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataWystawieniaFaktury")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Dodal")
                         .HasColumnType("text");
@@ -245,8 +245,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("DataWpisu")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataWpisu")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Dodal")
                         .HasColumnType("text");
@@ -276,8 +276,8 @@ namespace MyApplication.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("DataWpisu")
-                        .HasColumnType("text");
+                    b.Property<DateTime>("DataWpisu")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Dodal")
                         .HasColumnType("text");

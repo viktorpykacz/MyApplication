@@ -3,11 +3,11 @@
     public class Kontrakt
     {
         public int Id { get; set; }
-        public string? DataWpisu { get; set; }
-        public string? Dodal { get; set; } = "api";
-        public string? StartKontraktu { get; set; }
+        public DateTime DataWpisu { get; set; }
+        public string? Dodal { get; set; }
+        public DateTime StartKontraktu { get; set; }
         public bool? CzyTerminowy { get; set; }
-        public string? KoniecKontraktu { get; set; }
+        public DateTime KoniecKontraktu { get; set; }
         public string? NazwaProjektu { get; set; }
         public decimal? StawkaGodzinowa { get; set; }
         public decimal? StawkaMiesieczna { get; set; }

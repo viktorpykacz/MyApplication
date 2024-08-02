@@ -20,6 +20,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 var app = builder.Build();
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
